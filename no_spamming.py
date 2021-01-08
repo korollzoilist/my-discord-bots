@@ -30,7 +30,7 @@ class NoSpamming(commands.Bot):
 			print(spammers)
 			print(message.author.name)
 
-token = 'Nzk2MDQ0NDE0MDgxOTU3ODk4.X_SMIg.YMI9FcJGkw9ZEReTc-T_gw3AWCI'
+token = 'YOUR TOKEN'
 
 no_spamming = NoSpamming()
 no_spamming.run(token)

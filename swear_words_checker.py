@@ -71,7 +71,7 @@ class MyClient(commands.Bot):
         )
         print(members)
 
-token = 'Nzg3NjUyNDgzNzY5NTY1MjY2.X9YEig.hxb-ysH0Q4Ayg6fssLNnAhVjT9Q'
+token = 'YOUR TOKEN'
 
 client = MyClient()
 client.run(token)
