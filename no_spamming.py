@@ -1,9 +1,8 @@
 import discord
 from discord.ext import commands
+from config import *
 
-spammers = {}
-
-special_nicknames = [] # you should add your nickname and nicknames of people who shouldn't be kicked
+spammers = {} # here are members who spam a lot
 
 class NoSpamming(commands.Bot):
 
@@ -17,7 +16,7 @@ class NoSpamming(commands.Bot):
 		print('The bot is working')
 
 	async def on_message(self, message):
-		if message.author.name not in special_nicknames:
+		if message.author.name not in (admin + special_members):
 			if message.author.name not in spammers.keys():
 				spammers[message.author.name] = [1, message.content]
 			elif message.content != spammers[message.author.name][1]:
@@ -32,7 +31,5 @@ class NoSpamming(commands.Bot):
 			print(spammers)
 			print(message.author.name)
 
-token = 'YOUR TOKEN'
-
 no_spamming = NoSpamming()
-no_spamming.run(token)
+no_spamming.run(TOKEN)
